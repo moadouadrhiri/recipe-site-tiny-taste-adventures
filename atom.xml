@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tiny Taste Adventures</title>
+  <subtitle>Discover a world of nutritious and delicious recipes tailored for babies aged 9 to 12 months. Our easy-to-follow guides help parents introduce their little ones to exciting flavors and healthy eating habits.</subtitle>
+  <link href="https://tiny-taste-adventures.example.com/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://tiny-taste-adventures.example.com" rel="alternate" type="text/html"/>
+  <id>https://tiny-taste-adventures.example.com/</id>
+  <updated>2025-12-07T19:35:01.803Z</updated>
+  
+  <entry>
+    <title><![CDATA[Delicious Recipes for 9 Month Old Babies - Nutritious & Easy!]]></title>
+    <link href="https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy" rel="alternate" type="text/html"/>
+    <id>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy</id>
+    <published>2025-12-07T19:34:25.619Z</published>
+    <updated>2025-12-07T19:34:25.619Z</updated>
+    <summary><![CDATA[Explore our easy, nutritious recipes for 9 month old babies. Discover tips for tasty baby meals. Try it now!]]></summary>
+    <author>
+      <name>Tiny Taste Adventures</name>
+    </author>
+  </entry>
+  <entry>
+    <title><![CDATA[Nutritious Recipes for 9 Month Baby - Easy & Tasty Ideas]]></title>
+    <link href="https://tiny-taste-adventures.example.com/recipe/nutritious-recipes-for-9-month-baby-easy-tasty-ideas" rel="alternate" type="text/html"/>
+    <id>https://tiny-taste-adventures.example.com/recipe/nutritious-recipes-for-9-month-baby-easy-tasty-ideas</id>
+    <published>2025-12-07T19:34:19.871Z</published>
+    <updated>2025-12-07T19:34:19.871Z</updated>
+    <summary><![CDATA[Discover nutritious recipes for 9 month babies. Easy, tasty, and perfect for introducing new flavors. Start cooking now!]]></summary>
+    <author>
+      <name>Tiny Taste Adventures</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tiny Taste Adventures</title>
+    <link>https://tiny-taste-adventures.example.com</link>
+    <description>Discover a world of nutritious and delicious recipes tailored for babies aged 9 to 12 months. Our easy-to-follow guides help parents introduce their little ones to exciting flavors and healthy eating habits.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Dec 2025 19:35:01 GMT</lastBuildDate>
+    <atom:link href="https://tiny-taste-adventures.example.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://tiny-taste-adventures.example.com/logo.png</url>
+      <title>Tiny Taste Adventures</title>
+      <link>https://tiny-taste-adventures.example.com</link>
+    </image>
+    
+    <item>
+      <title><![CDATA[Delicious Recipes for 9 Month Old Babies - Nutritious & Easy!]]></title>
+      <link>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy</link>
+      <description><![CDATA[Explore our easy, nutritious recipes for 9 month old babies. Discover tips for tasty baby meals. Try it now!]]></description>
+      <pubDate>Sun, 07 Dec 2025 19:34:25 GMT</pubDate>
+      <guid isPermaLink="true">https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy</guid>
+      
+    </item>
+    <item>
+      <title><![CDATA[Nutritious Recipes for 9 Month Baby - Easy & Tasty Ideas]]></title>
+      <link>https://tiny-taste-adventures.example.com/recipe/nutritious-recipes-for-9-month-baby-easy-tasty-ideas</link>
+      <description><![CDATA[Discover nutritious recipes for 9 month babies. Easy, tasty, and perfect for introducing new flavors. Start cooking now!]]></description>
+      <pubDate>Sun, 07 Dec 2025 19:34:19 GMT</pubDate>
+      <guid isPermaLink="true">https://tiny-taste-adventures.example.com/recipe/nutritious-recipes-for-9-month-baby-easy-tasty-ideas</guid>
+      
+    </item>
+  </channel>
+</rss>
