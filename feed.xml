@@ -5,7 +5,7 @@
     <link>https://tiny-taste-adventures.example.com</link>
     <description>Discover a world of nutritious and delicious recipes tailored for babies aged 9 to 12 months. Our easy-to-follow guides help parents introduce their little ones to exciting flavors and healthy eating habits.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Dec 2025 19:35:01 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 20:00:02 GMT</lastBuildDate>
     <atom:link href="https://tiny-taste-adventures.example.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://tiny-taste-adventures.example.com/logo.png</url>
@@ -13,6 +13,14 @@
       <link>https://tiny-taste-adventures.example.com</link>
     </image>
     
+    <item>
+      <title><![CDATA[Delicious Baby Food Recipes 9-12 Months: Easy & Nutritious]]></title>
+      <link>https://tiny-taste-adventures.example.com/recipe/delicious-baby-food-recipes-9-12-months-easy-nutritious</link>
+      <description><![CDATA[Explore yummy baby food recipes for 9-12 months, packed with nutrients. Easy steps for happy mealtimes. Try these today!]]></description>
+      <pubDate>Sun, 07 Dec 2025 19:35:01 GMT</pubDate>
+      <guid isPermaLink="true">https://tiny-taste-adventures.example.com/recipe/delicious-baby-food-recipes-9-12-months-easy-nutritious</guid>
+      
+    </item>
     <item>
       <title><![CDATA[Delicious Recipes for 9 Month Old Babies - Nutritious & Easy!]]></title>
       <link>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy</link>
