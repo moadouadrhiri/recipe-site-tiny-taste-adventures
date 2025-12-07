@@ -12,7 +12,7 @@
   <style>
     
     :root {
-      --primary: #3b82f6;
+      --primary: #000000;
       --secondary: #10b981;
       --font-main: 'Source Sans 3', system-ui, -apple-system, sans-serif;
       --font-accent: 'Playfair Display', Georgia, serif;
@@ -22,7 +22,7 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     
     /* Header - consistent across all pages */
-    header { background: #FFFAF5; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 18px 0; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+    header { background: #FEF7ED; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 18px 0; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
     .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
     header a.logo { color: var(--primary); text-decoration: none; font-family: var(--font-accent); font-weight: 700; font-size: 1.5rem; font-style: italic; letter-spacing: -0.5px; }
     nav { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
@@ -35,7 +35,7 @@
     .search-box button { background: none; border: none; cursor: pointer; color: #666; display: flex; align-items: center; }
     
     /* Page header */
-    .page-header { padding: 70px 20px; text-align: center; background: linear-gradient(135deg, #3b82f608 0%, #10b98112 100%); }
+    .page-header { padding: 70px 20px; text-align: center; background: linear-gradient(135deg, #00000008 0%, #10b98112 100%); }
     .page-header h1 { font-family: var(--font-accent); font-size: 2.75rem; color: var(--primary); margin-bottom: 18px; font-weight: 700; letter-spacing: -0.02em; }
     .page-header p { color: #555; max-width: 650px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
     .content-section { padding: 70px 0; }
@@ -68,9 +68,9 @@
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--primary); transition: transform 0.2s; }
     .faq-item[open] summary::after { content: '-'; }
-    .faq-item[open] summary { background: #3b82f608; border-bottom: 1px solid #eee; }
+    .faq-item[open] summary { background: #00000008; border-bottom: 1px solid #eee; }
     .faq-answer { padding: 20px; color: #666; line-height: 1.8; }
-    .contact-cta { background: linear-gradient(135deg, #3b82f610 0%, #10b98110 100%); padding: 40px; border-radius: 15px; text-align: center; margin-top: 40px; }
+    .contact-cta { background: linear-gradient(135deg, #00000010 0%, #10b98110 100%); padding: 40px; border-radius: 15px; text-align: center; margin-top: 40px; }
     .contact-cta h3 { font-family: var(--font-accent); color: var(--primary); margin-bottom: 15px; }
     .contact-cta p { color: #666; margin-bottom: 20px; }
     .contact-cta a { display: inline-block; background: var(--primary); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.2s; }
