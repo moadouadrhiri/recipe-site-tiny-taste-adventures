@@ -40,7 +40,7 @@
   <meta name="theme-color" content="#000000">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/rss+xml" title="Tiny Taste Adventures RSS Feed" href="https://tiny-taste-adventures.example.com/feed.xml">
   <link rel="alternate" type="application/atom+xml" title="Tiny Taste Adventures Atom Feed" href="https://tiny-taste-adventures.example.com/atom.xml">
   <script type="application/ld+json">
@@ -90,6 +90,7 @@
       --secondary: #10b981;
       --font-main: 'Source Sans 3', system-ui, -apple-system, sans-serif;
       --font-accent: 'Playfair Display', Georgia, serif;
+      --font-headline: 'Oswald', sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: var(--font-main); line-height: 1.75; color: #333; background: #fff; font-size: 16px; -webkit-font-smoothing: antialiased; }
@@ -110,7 +111,7 @@
     
     /* Page header */
     .page-header { padding: 70px 20px; text-align: center; background: linear-gradient(135deg, #00000008 0%, #10b98112 100%); }
-    .page-header h1 { font-family: var(--font-accent); font-size: 2.75rem; color: var(--primary); margin-bottom: 18px; font-weight: 700; letter-spacing: -0.02em; }
+    .page-header h1 { font-family: var(--font-headline); font-size: 2.75rem; color: var(--primary); margin-bottom: 18px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; }
     .page-header p { color: #555; max-width: 650px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
     .content-section { padding: 70px 0; }
     
@@ -136,14 +137,24 @@
   
     
     /* Homepage specific styles */
-    .hero { background: linear-gradient(135deg, #00000015 0%, #10b98115 100%); padding: 80px 20px; text-align: center; }
-    .hero h1 { font-family: var(--font-accent); font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
-    .hero p { font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 30px; }
+    .hero { 
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                  url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop&q=80') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero h1 { font-family: var(--font-headline); font-size: 3.5rem; color: white; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.03em; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 30px; }
     .categories { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
-    .category-link { background: white; padding: 8px 20px; border-radius: 25px; text-decoration: none; color: var(--primary); border: 1px solid var(--primary); transition: all 0.2s; }
-    .category-link:hover { background: var(--primary); color: white; }
+    .category-link { background: rgba(255,255,255,0.9); padding: 8px 20px; border-radius: 25px; text-decoration: none; color: var(--primary); border: 1px solid transparent; transition: all 0.2s; font-weight: 600; }
+    .category-link:hover { background: white; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
     .recipes-section { padding: 60px 0; }
-    .section-title { font-family: var(--font-accent); font-size: 2rem; text-align: center; margin-bottom: 40px; color: var(--primary); }
+    .section-title { font-family: var(--font-headline); font-size: 2rem; text-align: center; margin-bottom: 40px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.02em; }
     .recipes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
     .recipe-card { background: white; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
     .recipe-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
