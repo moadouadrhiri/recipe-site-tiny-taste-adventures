@@ -5,15 +5,51 @@
 
   <url>
     <loc>https://tiny-taste-adventures.example.com/</loc>
-    <lastmod>2025-12-07T20:50:47.577Z</lastmod>
+    <lastmod>2025-12-07T21:06:28.351Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/category/baby-food</loc>
-    <lastmod>2025-12-07T20:50:47.577Z</lastmod>
+    <lastmod>2025-12-07T21:06:28.351Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/10-easy-recipes-kids-will-eat-happily-every-time</loc>
+    <lastmod>2025-12-07T21:06:14.742Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/top-baby-food-recipes-for-6-months-blw-easy-nutritious</loc>
+    <lastmod>2025-12-07T21:06:14.833Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/top-5-isagenix-recipes-400-600-calories-for-delicious-healthy-eating</loc>
+    <lastmod>2025-12-07T21:06:14.878Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/delicious-low-calorie-recipe-under-600-calories</loc>
+    <lastmod>2025-12-07T21:06:14.924Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-6-months-old-babies-nutritious-and-easy</loc>
+    <lastmod>2025-12-07T21:06:14.977Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/6-nutritious-recipes-for-6-months-baby-food-tiny-taste-adventures</loc>
+    <lastmod>2025-12-07T21:06:15.028Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-5-ingredient-recipes-for-busy-weeknights</loc>
