@@ -102,6 +102,7 @@
 }
 </script>
   <style>
+    
     :root {
       --primary: #3b82f6;
       --secondary: #10b981;
@@ -109,14 +110,50 @@
       --font-accent: 'Playfair Display', Georgia, serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: var(--font-main); line-height: 1.6; color: #333; background: #fff; }
+    body { font-family: var(--font-main); line-height: 1.75; color: #333; background: #fff; font-size: 16px; -webkit-font-smoothing: antialiased; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    header { background: #FFFAF5; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 20px 0; }
-    .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-    header a.logo { color: var(--primary); text-decoration: none; font-family: var(--font-accent); font-weight: 700; font-size: 1.8rem; }
-    nav { display: flex; gap: 15px; flex-wrap: wrap; }
-    nav a { color: #666; text-decoration: none; font-size: 0.95rem; }
-    nav a:hover { color: var(--primary); }
+    
+    /* Header - consistent across all pages */
+    header { background: #FFFAF5; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 18px 0; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+    .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    header a.logo { color: var(--primary); text-decoration: none; font-family: var(--font-accent); font-weight: 700; font-size: 1.5rem; font-style: italic; letter-spacing: -0.5px; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    nav a { color: #444; text-decoration: none; font-size: 0.95rem; font-weight: 600; padding: 8px 16px; border-radius: 8px; transition: all 0.2s ease; letter-spacing: 0.01em; }
+    nav a:hover { color: var(--primary); background: rgba(0,0,0,0.04); }
+    nav a[style*="color: var(--primary)"] { background: rgba(139,69,19,0.08); }
+    .search-box { display: flex; align-items: center; gap: 8px; background: #f5f5f5; padding: 10px 18px; border-radius: 25px; border: 1px solid transparent; transition: all 0.2s; }
+    .search-box:focus-within { border-color: var(--primary); background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .search-box input { border: none; background: transparent; outline: none; font-size: 0.9rem; width: 150px; font-family: var(--font-main); }
+    .search-box button { background: none; border: none; cursor: pointer; color: #666; display: flex; align-items: center; }
+    
+    /* Page header */
+    .page-header { padding: 70px 20px; text-align: center; background: linear-gradient(135deg, #3b82f608 0%, #10b98112 100%); }
+    .page-header h1 { font-family: var(--font-accent); font-size: 2.75rem; color: var(--primary); margin-bottom: 18px; font-weight: 700; letter-spacing: -0.02em; }
+    .page-header p { color: #555; max-width: 650px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
+    .content-section { padding: 70px 0; }
+    
+    /* Footer - consistent across all pages */
+    footer { background: #1a1a1a; color: #999; padding: 60px 0 35px; margin-top: 80px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 50px; margin-bottom: 50px; }
+    .footer-section h4 { color: white; margin-bottom: 24px; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; }
+    .footer-section ul { list-style: none; }
+    .footer-section ul li { margin-bottom: 12px; }
+    .footer-section ul a { color: #888; text-decoration: none; transition: color 0.2s; font-weight: 500; font-size: 0.95rem; }
+    .footer-section ul a:hover { color: white; }
+    .footer-section p { font-size: 0.9rem; line-height: 1.7; color: #777; }
+    .footer-bottom { text-align: center; padding-top: 35px; border-top: 1px solid #333; color: #666; font-size: 0.9rem; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2rem; }
+      .page-header { padding: 50px 20px; }
+      .search-box input { width: 100px; }
+      nav a { padding: 6px 12px; font-size: 0.9rem; }
+      .footer-content { gap: 30px; }
+    }
+  
+    
+    /* Category page specific styles */
     .category-header { padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #3b82f610 0%, #10b98110 100%); }
     .category-header h1 { font-family: var(--font-accent); font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
     .category-header p { color: #666; max-width: 600px; margin: 0 auto; }
@@ -132,16 +169,25 @@
     .card-content h3 a:hover { color: var(--primary); }
     .card-content p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
     .card-meta { display: flex; gap: 15px; color: #999; font-size: 0.85rem; }
-    footer { background: #f5f5f5; padding: 40px 0; text-align: center; color: #666; margin-top: 40px; }
   </style>
 </head>
 <body>
+  
   <header>
     <div class="container header-content">
       <a href="/" class="logo">Tiny Taste Adventures</a>
       <nav>
-        <a href="/">Home</a>
-        <a href="/category/baby-food.html">Baby Food</a>
+        <a href="/" >Home</a>
+        <a href="/recipes.html" >Recipes</a>
+        <a href="/categories.html" style="color: var(--primary);">Categories</a>
+        <a href="/authors.html" >Authors</a>
+        <a href="/blog.html" >Blog</a>
+        <div class="search-box">
+          <input type="text" placeholder="Search recipes..." id="search-input" data-testid="input-search">
+          <button type="button" onclick="window.location.href='/search.html?q=' + document.getElementById('search-input').value" data-testid="button-search">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </div>
       </nav>
     </div>
   </header>
@@ -192,9 +238,42 @@
     </section>
   </main>
   
+  
   <footer>
     <div class="container">
-      <p>&copy; 2025 Tiny Taste Adventures. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Tiny Taste Adventures</h4>
+          <p style="color: #888; font-size: 0.9rem; line-height: 1.6;">Discover a world of nutritious and delicious recipes tailored for babies aged 9 to 12 months. Our easy-to-follow guides help parents introduce their little ones to exciting flavors and healthy eating habits.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/recipes.html">All Recipes</a></li>
+            <li><a href="/categories.html">Categories</a></li>
+            <li><a href="/authors.html">Our Authors</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/category/baby-food.html">Baby Food</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/help.html">Help Center</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/search.html">Search</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tiny Taste Adventures. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 </body>

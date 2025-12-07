@@ -19,7 +19,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="article:published_time" content="2025-12-07T19:34:25.619Z">
-  <meta property="article:modified_time" content="2025-12-07T20:00:02.728Z">
+  <meta property="article:modified_time" content="2025-12-07T20:25:20.523Z">
   <meta property="article:author" content="Tiny Taste Adventures">
   <meta property="article:section" content="Baby Food">
   <meta property="article:tag" content="baby food">
@@ -102,7 +102,7 @@
     .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
     .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
     
-    /* Header */
+    /* Header - consistent with all pages */
     header { 
       background: var(--warm-neutral); 
       border-bottom: 1px solid var(--border-light); 
@@ -112,8 +112,8 @@
       z-index: 100;
       backdrop-filter: blur(10px);
     }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    .site-logo { 
+    .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .logo { 
       color: var(--primary); 
       text-decoration: none; 
       font-family: var(--font-display); 
@@ -121,7 +121,7 @@
       font-size: 1.75rem;
       letter-spacing: -0.02em;
     }
-    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
     nav a { 
       color: var(--text-secondary); 
       text-decoration: none; 
@@ -132,6 +132,10 @@
       transition: all 0.2s ease;
     }
     nav a:hover { background: rgba(0,0,0,0.05); color: var(--primary); }
+    .search-box { display: flex; align-items: center; gap: 8px; background: #f5f5f5; padding: 10px 18px; border-radius: 25px; border: 1px solid transparent; transition: all 0.2s; }
+    .search-box:focus-within { border-color: var(--primary); background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .search-box input { border: none; background: transparent; outline: none; font-size: 0.9rem; width: 120px; font-family: var(--font-body); }
+    .search-box button { background: none; border: none; cursor: pointer; color: #666; display: flex; align-items: center; }
     
     /* Breadcrumbs */
     .breadcrumbs { 
@@ -1188,17 +1192,19 @@
     
     /* Footer */
     footer { 
-      background: var(--text-primary); 
-      color: rgba(255,255,255,0.7); 
-      padding: 48px 0; 
-      text-align: center; 
-      margin-top: 64px;
+      background: #1a1a1a; 
+      color: #999; 
+      padding: 60px 0 35px; 
+      margin-top: 80px;
     }
-    footer .site-logo { color: white; margin-bottom: 16px; display: inline-block; }
-    footer p { font-size: 0.9rem; margin-bottom: 16px; }
-    footer nav { justify-content: center; margin-top: 20px; }
-    footer nav a { color: rgba(255,255,255,0.7); padding: 8px 12px; }
-    footer nav a:hover { color: white; background: rgba(255,255,255,0.1); }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 50px; margin-bottom: 50px; }
+    .footer-section h4 { color: white; margin-bottom: 24px; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; }
+    .footer-section ul { list-style: none; }
+    .footer-section ul li { margin-bottom: 12px; }
+    .footer-section ul a { color: #888; text-decoration: none; transition: color 0.2s; font-weight: 500; font-size: 0.95rem; }
+    .footer-section ul a:hover { color: white; }
+    .footer-section p { font-size: 0.9rem; line-height: 1.7; color: #777; }
+    .footer-bottom { text-align: center; padding-top: 35px; border-top: 1px solid #333; color: #666; font-size: 0.9rem; }
     
     /* Print Styles */
     @media print {
@@ -1271,7 +1277,7 @@
     }
   },
   "datePublished": "2025-12-07T19:34:25.619Z",
-  "dateModified": "2025-12-07T20:00:02.728Z",
+  "dateModified": "2025-12-07T20:25:20.523Z",
   "prepTime": "PT10M",
   "cookTime": "PT15M",
   "totalTime": "PT25M",
@@ -1443,7 +1449,7 @@
     }
   },
   "datePublished": "2025-12-07T19:34:25.619Z",
-  "dateModified": "2025-12-07T20:00:02.728Z",
+  "dateModified": "2025-12-07T20:25:20.523Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy"
@@ -1486,12 +1492,22 @@
 </script>
 </head>
 <body>
+  
   <header>
-    <div class="container header-inner">
-      <a href="/" class="site-logo">Tiny Taste Adventures</a>
+    <div class="container header-content">
+      <a href="/" class="logo">Tiny Taste Adventures</a>
       <nav>
-        <a href="/">Home</a>
-        <a href="/category/baby-food.html">Baby Food</a>
+        <a href="/" >Home</a>
+        <a href="/recipes.html" style="color: var(--primary);">Recipes</a>
+        <a href="/categories.html" >Categories</a>
+        <a href="/authors.html" >Authors</a>
+        <a href="/blog.html" >Blog</a>
+        <div class="search-box">
+          <input type="text" placeholder="Search recipes..." id="search-input" data-testid="input-search">
+          <button type="button" onclick="window.location.href='/search.html?q=' + document.getElementById('search-input').value" data-testid="button-search">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </div>
       </nav>
     </div>
   </header>
@@ -2020,17 +2036,42 @@
     </div>
   </main>
   
+  
   <footer>
     <div class="container">
-      <a href="/" class="site-logo">Tiny Taste Adventures</a>
-      <p>&copy; 2025 Tiny Taste Adventures. All rights reserved.</p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/authors.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/sitemap.xml">Sitemap</a>
-        <a href="/feed.xml">RSS Feed</a>
-      </nav>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Tiny Taste Adventures</h4>
+          <p style="color: #888; font-size: 0.9rem; line-height: 1.6;">Discover a world of nutritious and delicious recipes tailored for babies aged 9 to 12 months. Our easy-to-follow guides help parents introduce their little ones to exciting flavors and healthy eating habits.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/recipes.html">All Recipes</a></li>
+            <li><a href="/categories.html">Categories</a></li>
+            <li><a href="/authors.html">Our Authors</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/category/baby-food.html">Baby Food</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/help.html">Help Center</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/search.html">Search</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tiny Taste Adventures. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   
