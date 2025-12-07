@@ -5,7 +5,7 @@
     <link>https://tiny-taste-adventures.example.com</link>
     <description>Discover a world of nutritious and delicious recipes tailored for babies aged 9 to 12 months. Our easy-to-follow guides help parents introduce their little ones to exciting flavors and healthy eating habits.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Dec 2025 20:27:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 20:50:47 GMT</lastBuildDate>
     <atom:link href="https://tiny-taste-adventures.example.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://tiny-taste-adventures.example.com/logo.png</url>
@@ -13,6 +13,38 @@
       <link>https://tiny-taste-adventures.example.com</link>
     </image>
     
+    <item>
+      <title><![CDATA[Delicious 5-Ingredient Recipes for Busy Weeknights]]></title>
+      <link>https://tiny-taste-adventures.example.com/recipe/delicious-5-ingredient-recipes-for-busy-weeknights</link>
+      <description><![CDATA[Discover quick and delicious 5-ingredient recipes perfect for busy weeknights. Simple, tasty meals with minimal fuss. Try them now!]]></description>
+      <pubDate>Sun, 07 Dec 2025 20:50:32 GMT</pubDate>
+      <guid isPermaLink="true">https://tiny-taste-adventures.example.com/recipe/delicious-5-ingredient-recipes-for-busy-weeknights</guid>
+      <enclosure url="couzintk.site/recipes/hero/1f071b5e-aeeb-4ba5-a5f8-2e155bf8a8ba.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title><![CDATA[Delicious Recipes 500 Calories or Less: Healthy & Satisfying]]></title>
+      <link>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-500-calories-or-less-healthy-satisfying</link>
+      <description><![CDATA[Explore our top recipes 500 calories or less! Perfect for healthy meals without sacrificing flavor. Try them today!]]></description>
+      <pubDate>Sun, 07 Dec 2025 20:50:24 GMT</pubDate>
+      <guid isPermaLink="true">https://tiny-taste-adventures.example.com/recipe/delicious-recipes-500-calories-or-less-healthy-satisfying</guid>
+      <enclosure url="couzintk.site/recipes/hero/ab0a3c19-d6d7-48a3-a7a2-6d94615db323.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title><![CDATA[Delicious Recipes 500 Calories: Flavorful & Fulfilling Meals]]></title>
+      <link>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-500-calories-flavorful-fulfilling-meals</link>
+      <description><![CDATA[Discover delicious recipes 500 calories each. Perfect for maintaining a balanced diet without sacrificing flavor. Try them today!]]></description>
+      <pubDate>Sun, 07 Dec 2025 20:50:24 GMT</pubDate>
+      <guid isPermaLink="true">https://tiny-taste-adventures.example.com/recipe/delicious-recipes-500-calories-flavorful-fulfilling-meals</guid>
+      <enclosure url="couzintk.site/recipes/hero/6aefc7fd-ff1a-4365-b9be-ae3f3102c572.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title><![CDATA[Delicious Recipes with 5 Ingredients or Less - Try Now!]]></title>
+      <link>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-with-5-ingredients-or-less-try-now</link>
+      <description><![CDATA[Discover easy recipes 5 ingredients or less. Enjoy quick, delicious meals with minimal effort. Perfect for busy weeknights!]]></description>
+      <pubDate>Sun, 07 Dec 2025 20:50:24 GMT</pubDate>
+      <guid isPermaLink="true">https://tiny-taste-adventures.example.com/recipe/delicious-recipes-with-5-ingredients-or-less-try-now</guid>
+      <enclosure url="couzintk.site/recipes/hero/ca403932-55db-4f55-a14d-748c089ec26c.jpg" type="image/jpeg"/>
+    </item>
     <item>
       <title><![CDATA[Delicious Baby Food Recipes 9-12 Months: Easy & Nutritious]]></title>
       <link>https://tiny-taste-adventures.example.com/recipe/delicious-baby-food-recipes-9-12-months-easy-nutritious</link>
