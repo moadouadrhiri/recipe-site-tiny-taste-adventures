@@ -18,8 +18,8 @@
   <meta property="og:image:alt" content="Baby Food Recipes 6 Months BLW -...">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="article:published_time" content="2025-12-07T21:06:14.833Z">
-  <meta property="article:modified_time" content="2025-12-07T21:09:02.396Z">
+  <meta property="article:published_time" content="2025-12-08T07:56:46.639Z">
+  <meta property="article:modified_time" content="2025-12-08T07:57:19.373Z">
   <meta property="article:author" content="Marcus Chen">
   <meta property="article:tag" content="baby food">
   <meta property="article:tag" content="6 months">
@@ -431,6 +431,13 @@
       justify-content: center; 
       color: white;
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .chef-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .chef-info { display: flex; flex-direction: column; gap: 2px; }
     .chef-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
@@ -850,6 +857,28 @@
       flex-shrink: 0;
       margin-top: 2px;
     }
+    .recipe-info-chef-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .recipe-info-chef-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .recipe-info-chef-avatar svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
     .recipe-info-label {
       font-size: 0.8rem;
       color: var(--text-muted);
@@ -1210,112 +1239,95 @@
     .footer-section p { font-size: 0.9rem; line-height: 1.7; color: #777; }
     .footer-bottom { text-align: center; padding-top: 35px; border-top: 1px solid #333; color: #666; font-size: 0.9rem; }
     
-    /* Print Styles - Compact Recipe Card like bakeitgood.com */
+    /* Print Styles - Text-Based Recipe Card Format */
     @media print {
       header, footer, .social-share, .recipe-actions, .breadcrumbs, nav, .scale-btn,
       .intro-story, .content-section, .serving-suggestions, .finished-dish, .faqs,
       .nutrition-grid, .chef-attribution, .download-card, .hero-overlay, .hero-badge,
-      .recipe-info-card, .recipe-meta-bar, .ingredient-image { display: none !important; }
+      .recipe-info-card, .recipe-meta-bar, .ingredient-image, .recipe-hero,
+      .ingredients, .instructions, .note-box, .pro-tips-box, .why-love-box,
+      .equipment-section, .variations-section, .recipe-content { display: none !important; }
       
-      body { font-size: 10pt; line-height: 1.4; color: #000; background: #fff; margin: 0; padding: 15px; }
+      body { 
+        font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 11pt; 
+        line-height: 1.6; 
+        color: #000; 
+        background: #fff; 
+        margin: 0; 
+        padding: 20px 30px; 
+      }
       .container, .container-wide { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
-      .recipe-hero { display: none !important; }
-      .recipe-content { flex-direction: column !important; gap: 20px; padding: 0 !important; }
-      .ingredients { position: static; width: 100% !important; }
       
-      /* Compact Print Header */
+      /* Show print-only content */
       .print-only { display: block !important; }
-      .print-header {
-        border-bottom: 2px solid #000;
-        padding-bottom: 10px;
-        margin-bottom: 15px;
+      
+      /* Print Recipe Card */
+      .print-recipe-card {
+        max-width: 700px;
+        margin: 0 auto;
       }
-      .print-header h1 {
-        font-family: 'Oswald', sans-serif;
+      
+      /* Title */
+      .print-title {
+        font-family: Georgia, 'Times New Roman', serif;
         font-size: 18pt;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin: 0 0 5px 0;
-        line-height: 1.2;
+        font-weight: bold;
+        margin: 0 0 8px 0;
+        line-height: 1.3;
       }
+      
+      /* Description */
       .print-description {
-        font-size: 10pt;
+        font-size: 11pt;
         color: #333;
-        margin-bottom: 8px;
+        margin-bottom: 20px;
+        font-style: italic;
       }
-      .print-meta {
-        display: flex;
-        gap: 15px;
-        font-size: 9pt;
-        color: #555;
-      }
-      .print-meta span { font-weight: 600; }
       
-      /* Compact Ingredients */
-      h2 { 
-        font-family: 'Oswald', sans-serif;
-        font-size: 12pt; 
+      /* Section Headers */
+      .print-section-header {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 13pt;
+        font-weight: bold;
+        margin: 25px 0 12px 0;
+        padding-bottom: 0;
+      }
+      
+      /* Ingredient Group Header */
+      .print-ingredient-group {
+        font-size: 11pt;
         font-weight: 600;
-        text-transform: uppercase;
         margin: 15px 0 8px 0;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #ddd;
-        page-break-after: avoid;
-      }
-      .ingredients-card { background: #f8f8f8; padding: 10px; margin-bottom: 15px; }
-      .ingredient-item { padding: 3px 0; font-size: 9pt; border: none !important; }
-      .checkmark, .ingredient-checkbox label::before { display: none !important; }
-      .ingredient-group h4 { 
-        font-size: 10pt; 
-        font-weight: 700; 
-        margin: 8px 0 4px; 
-        text-transform: uppercase;
+        color: #000;
       }
       
-      /* Compact Instructions */
-      .instructions { padding-left: 0 !important; }
-      .instructions li { 
-        margin-bottom: 8px; 
-        padding-left: 25px !important; 
-        font-size: 9pt;
-        line-height: 1.4;
-        position: relative;
+      /* Numbered Items (ingredients & instructions) */
+      .print-numbered-item {
+        font-size: 10.5pt;
+        line-height: 1.5;
+        margin: 4px 0;
+        padding-left: 0;
       }
-      .instructions li::before { 
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 18px; 
-        height: 18px; 
-        font-size: 8pt;
-        line-height: 18px;
+      .print-item-number {
+        display: inline-block;
+        min-width: 28px;
+        font-weight: 600;
       }
       
-      /* Compact Tips Section */
-      .tips-section, .notes-section {
-        background: #f5f5f5;
-        padding: 8px;
-        margin-top: 10px;
-        font-size: 8pt;
+      /* Extra Information section */
+      .print-extra-info {
+        margin-top: 25px;
       }
-      .tips-section h3, .notes-section h3 {
-        font-size: 9pt;
-        margin-bottom: 5px;
+      .print-extra-item {
+        font-size: 10pt;
+        line-height: 1.5;
+        margin: 6px 0;
+        color: #333;
       }
-      
-      /* Print Footer */
-      .print-footer {
-        margin-top: 15px;
-        padding-top: 10px;
-        border-top: 1px solid #ccc;
-        font-size: 8pt;
-        color: #666;
-        text-align: center;
-      }
-      .print-footer a { color: #000; text-decoration: underline; }
       
       /* Page break control */
-      .instructions { page-break-inside: avoid; }
+      .print-section { page-break-inside: avoid; }
     }
     
     .print-only { display: none; }
@@ -1350,8 +1362,8 @@
       "height": 60
     }
   },
-  "datePublished": "2025-12-07T21:06:14.833Z",
-  "dateModified": "2025-12-07T21:09:02.396Z",
+  "datePublished": "2025-12-08T07:56:46.639Z",
+  "dateModified": "2025-12-08T07:57:19.373Z",
   "prepTime": "PT15M",
   "cookTime": "PT12M",
   "totalTime": "PT27M",
@@ -1531,8 +1543,8 @@
       "height": 60
     }
   },
-  "datePublished": "2025-12-07T21:06:14.833Z",
-  "dateModified": "2025-12-07T21:09:02.396Z",
+  "datePublished": "2025-12-08T07:56:46.639Z",
+  "dateModified": "2025-12-08T07:57:19.373Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://tiny-taste-adventures.example.com/recipe/top-baby-food-recipes-for-6-months-blw-easy-nutritious"
@@ -1589,15 +1601,45 @@
     </div>
   </header>
   
-  <!-- Print-Only Compact Recipe Card Header -->
-  <div class="print-only print-header">
-    <h1>Top Baby Food Recipes for 6 Months BLW - Easy & Nutritious</h1>
-    <p class="print-description">Introduce your little one to solid foods with this delightful baby food recipe for 6 months BLW. Packed with nutrition and flavor, it's a perfect first meal.</p>
-    <div class="print-meta">
-      <span>By: Marcus Chen</span>
-      <span>Prep: 15 min</span>
-      <span>Cook: 12 min</span>
-      <span>Servings: 4</span>
+  <!-- Print-Only Text-Based Recipe Card -->
+  <div class="print-only print-recipe-card">
+    <h1 class="print-title">Top Baby Food Recipes for 6 Months BLW - Easy & Nutritious (Print-Friendly Version)</h1>
+    <p class="print-description"><em>Introduce your little one to solid foods with this delightful baby food recipe for 6 months BLW. Packed with nutrition and flavor, it's a perfect first meal.</em></p>
+    
+    <div class="print-section-header"># Ingredients You'll Need:</div>
+    <div class="print-numbered-item"><span class="print-item-number">01 -</span> 1 medium sweet potato, peeled and diced</div>
+<div class="print-numbered-item"><span class="print-item-number">02 -</span> 1 ripe avocado, peeled and pitted</div>
+<div class="print-numbered-item"><span class="print-item-number">03 -</span> 1 medium banana, ripe</div>
+<div class="print-numbered-item"><span class="print-item-number">04 -</span> 1/4 teaspoon cinnamon, optional</div>
+
+    
+    <div class="print-section-header"># How to Make It:</div>
+    <div class="print-numbered-item"><span class="print-item-number">01 -</span> 1</div>
+<div class="print-numbered-item"><span class="print-item-number">02 -</span> 2</div>
+<div class="print-numbered-item"><span class="print-item-number">03 -</span> 3</div>
+<div class="print-numbered-item"><span class="print-item-number">04 -</span> 4</div>
+<div class="print-numbered-item"><span class="print-item-number">05 -</span> 5</div>
+
+    
+    <div class="print-section-header"># Extra Information:</div>
+    <div class="print-extra-info">
+      <div class="print-extra-item"><span class="print-item-number">01 -</span> Ensure all ingredients are ripe and soft to prevent choking hazards.</div>
+<div class="print-extra-item"><span class="print-item-number">02 -</span> Introduce new flavors gradually to monitor for allergic reactions.</div>
+<div class="print-extra-item"><span class="print-item-number">03 -</span> Use organic produce when possible for the best nutrition.</div>
+<div class="print-extra-item"><span class="print-item-number">04 -</span> Engage your baby during mealtime to encourage positive eating habits.</div>
+<div class="print-extra-item"><span class="print-item-number">05 -</span> Always supervise your baby when eating to ensure safety.</div>
+<div class="print-extra-item"><span class="print-item-number">06 -</span> Add mango cubes to the mix for a sweet, tropical flavor that introduces a new fruit to your baby.</div>
+<div class="print-extra-item"><span class="print-item-number">07 -</span> Incorporate mashed blueberries for a burst of antioxidants and a slightly tart flavor.</div>
+<div class="print-extra-item"><span class="print-item-number">08 -</span> Store any leftover baby food in an airtight container in the refrigerator for up to 48 hours. Use a small container to limit air exposure, preserving the food's freshness. If freezing, portion the mixture into ice cube trays, allowing you to defrost small amounts as needed. Frozen portions can last up to three months. When reheating, opt for a gentle method like steaming or using a warm water bath, ensuring the food reaches a safe temperature. Avoid microwaving directly, as it can create hot spots. Stir well and test the temperature before serving to ensure even heating.</div>
+
+    </div>
+    
+    <div class="print-section-header"># Recipe Details:</div>
+    <div class="print-extra-info">
+      <div class="print-extra-item"><span class="print-item-number">01 -</span> Prep time: 15 minutes</div>
+      <div class="print-extra-item"><span class="print-item-number">02 -</span> Cook time: 12 minutes</div>
+      <div class="print-extra-item"><span class="print-item-number">03 -</span> Servings: 4</div>
+      <div class="print-extra-item"><span class="print-item-number">04 -</span> Recipe by: Marcus Chen</div>
     </div>
   </div>
   
@@ -1659,7 +1701,9 @@
       </div>
       <div class="recipe-info-grid">
         <div class="recipe-info-item">
-          <svg class="recipe-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="recipe-info-chef-avatar">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400" alt="Marcus Chen" class="recipe-info-chef-img">
+          </div>
           <div>
             <div class="recipe-info-label">Created By</div>
             <div class="recipe-info-value">Marcus Chen</div>
@@ -1735,12 +1779,12 @@
     
     <div class="chef-attribution">
       <div class="chef-avatar">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400" alt="Marcus Chen" class="chef-avatar-img" loading="lazy">
       </div>
       <div class="chef-info">
         <span class="chef-label">Recipe by</span>
         <strong class="chef-name">Marcus Chen</strong>
-        <span class="publish-date">Published on December 7, 2025</span>
+        <span class="publish-date">Published on December 8, 2025</span>
       </div>
     </div>
     

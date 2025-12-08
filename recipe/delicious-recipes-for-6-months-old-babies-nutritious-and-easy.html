@@ -18,8 +18,8 @@
   <meta property="og:image:alt" content="Recipes 6 Months - Easy & Nutriti...">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="article:published_time" content="2025-12-07T21:06:14.977Z">
-  <meta property="article:modified_time" content="2025-12-07T21:09:02.398Z">
+  <meta property="article:published_time" content="2025-12-08T07:56:46.862Z">
+  <meta property="article:modified_time" content="2025-12-08T07:57:19.375Z">
   <meta property="article:author" content="Aisha Johnson">
   <meta property="article:tag" content="recipes 6 months">
   <meta property="article:tag" content="baby food">
@@ -426,6 +426,13 @@
       justify-content: center; 
       color: white;
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .chef-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .chef-info { display: flex; flex-direction: column; gap: 2px; }
     .chef-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
@@ -845,6 +852,28 @@
       flex-shrink: 0;
       margin-top: 2px;
     }
+    .recipe-info-chef-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .recipe-info-chef-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .recipe-info-chef-avatar svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
     .recipe-info-label {
       font-size: 0.8rem;
       color: var(--text-muted);
@@ -1205,112 +1234,95 @@
     .footer-section p { font-size: 0.9rem; line-height: 1.7; color: #777; }
     .footer-bottom { text-align: center; padding-top: 35px; border-top: 1px solid #333; color: #666; font-size: 0.9rem; }
     
-    /* Print Styles - Compact Recipe Card like bakeitgood.com */
+    /* Print Styles - Text-Based Recipe Card Format */
     @media print {
       header, footer, .social-share, .recipe-actions, .breadcrumbs, nav, .scale-btn,
       .intro-story, .content-section, .serving-suggestions, .finished-dish, .faqs,
       .nutrition-grid, .chef-attribution, .download-card, .hero-overlay, .hero-badge,
-      .recipe-info-card, .recipe-meta-bar, .ingredient-image { display: none !important; }
+      .recipe-info-card, .recipe-meta-bar, .ingredient-image, .recipe-hero,
+      .ingredients, .instructions, .note-box, .pro-tips-box, .why-love-box,
+      .equipment-section, .variations-section, .recipe-content { display: none !important; }
       
-      body { font-size: 10pt; line-height: 1.4; color: #000; background: #fff; margin: 0; padding: 15px; }
+      body { 
+        font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 11pt; 
+        line-height: 1.6; 
+        color: #000; 
+        background: #fff; 
+        margin: 0; 
+        padding: 20px 30px; 
+      }
       .container, .container-wide { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
-      .recipe-hero { display: none !important; }
-      .recipe-content { flex-direction: column !important; gap: 20px; padding: 0 !important; }
-      .ingredients { position: static; width: 100% !important; }
       
-      /* Compact Print Header */
+      /* Show print-only content */
       .print-only { display: block !important; }
-      .print-header {
-        border-bottom: 2px solid #000;
-        padding-bottom: 10px;
-        margin-bottom: 15px;
+      
+      /* Print Recipe Card */
+      .print-recipe-card {
+        max-width: 700px;
+        margin: 0 auto;
       }
-      .print-header h1 {
-        font-family: 'Oswald', sans-serif;
+      
+      /* Title */
+      .print-title {
+        font-family: Georgia, 'Times New Roman', serif;
         font-size: 18pt;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin: 0 0 5px 0;
-        line-height: 1.2;
+        font-weight: bold;
+        margin: 0 0 8px 0;
+        line-height: 1.3;
       }
+      
+      /* Description */
       .print-description {
-        font-size: 10pt;
+        font-size: 11pt;
         color: #333;
-        margin-bottom: 8px;
+        margin-bottom: 20px;
+        font-style: italic;
       }
-      .print-meta {
-        display: flex;
-        gap: 15px;
-        font-size: 9pt;
-        color: #555;
-      }
-      .print-meta span { font-weight: 600; }
       
-      /* Compact Ingredients */
-      h2 { 
-        font-family: 'Oswald', sans-serif;
-        font-size: 12pt; 
+      /* Section Headers */
+      .print-section-header {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 13pt;
+        font-weight: bold;
+        margin: 25px 0 12px 0;
+        padding-bottom: 0;
+      }
+      
+      /* Ingredient Group Header */
+      .print-ingredient-group {
+        font-size: 11pt;
         font-weight: 600;
-        text-transform: uppercase;
         margin: 15px 0 8px 0;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #ddd;
-        page-break-after: avoid;
-      }
-      .ingredients-card { background: #f8f8f8; padding: 10px; margin-bottom: 15px; }
-      .ingredient-item { padding: 3px 0; font-size: 9pt; border: none !important; }
-      .checkmark, .ingredient-checkbox label::before { display: none !important; }
-      .ingredient-group h4 { 
-        font-size: 10pt; 
-        font-weight: 700; 
-        margin: 8px 0 4px; 
-        text-transform: uppercase;
+        color: #000;
       }
       
-      /* Compact Instructions */
-      .instructions { padding-left: 0 !important; }
-      .instructions li { 
-        margin-bottom: 8px; 
-        padding-left: 25px !important; 
-        font-size: 9pt;
-        line-height: 1.4;
-        position: relative;
+      /* Numbered Items (ingredients & instructions) */
+      .print-numbered-item {
+        font-size: 10.5pt;
+        line-height: 1.5;
+        margin: 4px 0;
+        padding-left: 0;
       }
-      .instructions li::before { 
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 18px; 
-        height: 18px; 
-        font-size: 8pt;
-        line-height: 18px;
+      .print-item-number {
+        display: inline-block;
+        min-width: 28px;
+        font-weight: 600;
       }
       
-      /* Compact Tips Section */
-      .tips-section, .notes-section {
-        background: #f5f5f5;
-        padding: 8px;
-        margin-top: 10px;
-        font-size: 8pt;
+      /* Extra Information section */
+      .print-extra-info {
+        margin-top: 25px;
       }
-      .tips-section h3, .notes-section h3 {
-        font-size: 9pt;
-        margin-bottom: 5px;
+      .print-extra-item {
+        font-size: 10pt;
+        line-height: 1.5;
+        margin: 6px 0;
+        color: #333;
       }
-      
-      /* Print Footer */
-      .print-footer {
-        margin-top: 15px;
-        padding-top: 10px;
-        border-top: 1px solid #ccc;
-        font-size: 8pt;
-        color: #666;
-        text-align: center;
-      }
-      .print-footer a { color: #000; text-decoration: underline; }
       
       /* Page break control */
-      .instructions { page-break-inside: avoid; }
+      .print-section { page-break-inside: avoid; }
     }
     
     .print-only { display: none; }
@@ -1345,8 +1357,8 @@
       "height": 60
     }
   },
-  "datePublished": "2025-12-07T21:06:14.977Z",
-  "dateModified": "2025-12-07T21:09:02.398Z",
+  "datePublished": "2025-12-08T07:56:46.862Z",
+  "dateModified": "2025-12-08T07:57:19.375Z",
   "prepTime": "PT15M",
   "cookTime": "PT20M",
   "totalTime": "PT35M",
@@ -1530,8 +1542,8 @@
       "height": 60
     }
   },
-  "datePublished": "2025-12-07T21:06:14.977Z",
-  "dateModified": "2025-12-07T21:09:02.398Z",
+  "datePublished": "2025-12-08T07:56:46.862Z",
+  "dateModified": "2025-12-08T07:57:19.375Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-6-months-old-babies-nutritious-and-easy"
@@ -1588,15 +1600,44 @@
     </div>
   </header>
   
-  <!-- Print-Only Compact Recipe Card Header -->
-  <div class="print-only print-header">
-    <h1>Delicious Recipes for 6 Months Old Babies - Nutritious and Easy</h1>
-    <p class="print-description">Introduce your 6-month-old to new flavors with these easy, nutritious recipes. Perfect for tiny taste adventures!</p>
-    <div class="print-meta">
-      <span>By: Aisha Johnson</span>
-      <span>Prep: 15 min</span>
-      <span>Cook: 20 min</span>
-      <span>Servings: 4</span>
+  <!-- Print-Only Text-Based Recipe Card -->
+  <div class="print-only print-recipe-card">
+    <h1 class="print-title">Delicious Recipes for 6 Months Old Babies - Nutritious and Easy (Print-Friendly Version)</h1>
+    <p class="print-description"><em>Introduce your 6-month-old to new flavors with these easy, nutritious recipes. Perfect for tiny taste adventures!</em></p>
+    
+    <div class="print-section-header"># Ingredients You'll Need:</div>
+    <div class="print-numbered-item"><span class="print-item-number">01 -</span> 1 medium sweet potato, peeled and diced</div>
+<div class="print-numbered-item"><span class="print-item-number">02 -</span> 1 ripe avocado, halved and pitted</div>
+<div class="print-numbered-item"><span class="print-item-number">03 -</span> 2 medium carrots, peeled and chopped</div>
+<div class="print-numbered-item"><span class="print-item-number">04 -</span> 1 ripe banana, sliced</div>
+<div class="print-numbered-item"><span class="print-item-number">05 -</span> 1 cup fresh peas, steamed</div>
+
+    
+    <div class="print-section-header"># How to Make It:</div>
+    <div class="print-numbered-item"><span class="print-item-number">01 -</span> 1</div>
+<div class="print-numbered-item"><span class="print-item-number">02 -</span> 2</div>
+<div class="print-numbered-item"><span class="print-item-number">03 -</span> 3</div>
+<div class="print-numbered-item"><span class="print-item-number">04 -</span> 4</div>
+<div class="print-numbered-item"><span class="print-item-number">05 -</span> 5</div>
+
+    
+    <div class="print-section-header"># Extra Information:</div>
+    <div class="print-extra-info">
+      <div class="print-extra-item"><span class="print-item-number">01 -</span> Introduce one new food at a time to monitor for allergies.</div>
+<div class="print-extra-item"><span class="print-item-number">02 -</span> Adjust puree textures by adding breast milk or formula.</div>
+<div class="print-extra-item"><span class="print-item-number">03 -</span> Use ripe fruits and vegetables for optimal sweetness and texture.</div>
+<div class="print-extra-item"><span class="print-item-number">04 -</span> Add a small amount of mango puree for a tropical twist on the banana avocado mash, enhancing sweetness and vitamin content.</div>
+<div class="print-extra-item"><span class="print-item-number">05 -</span> Sprinkle a bit of cinnamon into the sweet potato mash for a warming autumnal flavor that babies will love.</div>
+<div class="print-extra-item"><span class="print-item-number">06 -</span> Proper storage is crucial for maintaining the freshness of these recipes for 6 months old babies. At room temperature, purees should not be left out for more than two hours. In the refrigerator, store them in airtight containers for up to three days. If you plan to make larger batches, freezing is an excellent option. Freeze purees in ice cube trays, then transfer to freezer bags for up to three months. For reheating, the microwave is quick and effective—use short bursts and stir frequently to ensure even heating. Alternatively, a stovetop method with gentle warming in a saucepan works well, helping to restore the puree’s texture. Always test the temperature before serving to ensure it’s not too hot. If a puree becomes too thick upon reheating, simply stir in a little breast milk or formula to revive its original consistency.</div>
+
+    </div>
+    
+    <div class="print-section-header"># Recipe Details:</div>
+    <div class="print-extra-info">
+      <div class="print-extra-item"><span class="print-item-number">01 -</span> Prep time: 15 minutes</div>
+      <div class="print-extra-item"><span class="print-item-number">02 -</span> Cook time: 20 minutes</div>
+      <div class="print-extra-item"><span class="print-item-number">03 -</span> Servings: 4</div>
+      <div class="print-extra-item"><span class="print-item-number">04 -</span> Recipe by: Aisha Johnson</div>
     </div>
   </div>
   
@@ -1658,7 +1699,9 @@
       </div>
       <div class="recipe-info-grid">
         <div class="recipe-info-item">
-          <svg class="recipe-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="recipe-info-chef-avatar">
+            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400" alt="Aisha Johnson" class="recipe-info-chef-img">
+          </div>
           <div>
             <div class="recipe-info-label">Created By</div>
             <div class="recipe-info-value">Aisha Johnson</div>
@@ -1734,12 +1777,12 @@
     
     <div class="chef-attribution">
       <div class="chef-avatar">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400" alt="Aisha Johnson" class="chef-avatar-img" loading="lazy">
       </div>
       <div class="chef-info">
         <span class="chef-label">Recipe by</span>
         <strong class="chef-name">Aisha Johnson</strong>
-        <span class="publish-date">Published on December 7, 2025</span>
+        <span class="publish-date">Published on December 8, 2025</span>
       </div>
     </div>
     

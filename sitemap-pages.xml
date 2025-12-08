@@ -5,91 +5,115 @@
 
   <url>
     <loc>https://tiny-taste-adventures.example.com/</loc>
-    <lastmod>2025-12-07T21:09:02.402Z</lastmod>
+    <lastmod>2025-12-08T07:57:19.381Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/category/baby-food</loc>
-    <lastmod>2025-12-07T21:09:02.402Z</lastmod>
+    <lastmod>2025-12-08T07:57:19.381Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/ultimate-pierogies-and-kielbasa-skillet-recipe-one-pan-wonder</loc>
+    <lastmod>2025-12-08T07:57:00.338Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/hearty-crock-pot-stew-meat-mushrooms-comfort-in-a-bowl</loc>
+    <lastmod>2025-12-08T07:57:00.482Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/10-easy-recipes-kids-can-make-themselves-fun-safe</loc>
+    <lastmod>2025-12-08T07:56:52.798Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tiny-taste-adventures.example.com/recipe/10-recipes-kids-will-love-easy-fun-cooking-ideas</loc>
+    <lastmod>2025-12-08T07:56:52.943Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/10-easy-recipes-kids-will-eat-happily-every-time</loc>
-    <lastmod>2025-12-07T21:06:14.742Z</lastmod>
+    <lastmod>2025-12-08T07:56:46.494Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/top-baby-food-recipes-for-6-months-blw-easy-nutritious</loc>
-    <lastmod>2025-12-07T21:06:14.833Z</lastmod>
+    <lastmod>2025-12-08T07:56:46.639Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/top-5-isagenix-recipes-400-600-calories-for-delicious-healthy-eating</loc>
-    <lastmod>2025-12-07T21:06:14.878Z</lastmod>
+    <lastmod>2025-12-08T07:56:46.713Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-low-calorie-recipe-under-600-calories</loc>
-    <lastmod>2025-12-07T21:06:14.924Z</lastmod>
+    <lastmod>2025-12-08T07:56:46.787Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-6-months-old-babies-nutritious-and-easy</loc>
-    <lastmod>2025-12-07T21:06:14.977Z</lastmod>
+    <lastmod>2025-12-08T07:56:46.862Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/6-nutritious-recipes-for-6-months-baby-food-tiny-taste-adventures</loc>
-    <lastmod>2025-12-07T21:06:15.028Z</lastmod>
+    <lastmod>2025-12-08T07:56:46.936Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-5-ingredient-recipes-for-busy-weeknights</loc>
-    <lastmod>2025-12-07T20:50:32.031Z</lastmod>
+    <lastmod>2025-12-08T07:56:47.010Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-500-calories-or-less-healthy-satisfying</loc>
-    <lastmod>2025-12-07T20:50:24.865Z</lastmod>
+    <lastmod>2025-12-08T07:56:47.086Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-500-calories-flavorful-fulfilling-meals</loc>
-    <lastmod>2025-12-07T20:50:24.820Z</lastmod>
+    <lastmod>2025-12-08T07:56:47.161Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-with-5-ingredients-or-less-try-now</loc>
-    <lastmod>2025-12-07T20:50:24.731Z</lastmod>
+    <lastmod>2025-12-08T07:56:47.236Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-baby-food-recipes-9-12-months-easy-nutritious</loc>
-    <lastmod>2025-12-07T19:35:01.301Z</lastmod>
+    <lastmod>2025-12-08T07:56:47.312Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy</loc>
-    <lastmod>2025-12-07T19:34:25.619Z</lastmod>
+    <lastmod>2025-12-08T07:56:47.386Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://tiny-taste-adventures.example.com/recipe/nutritious-recipes-for-9-month-baby-easy-tasty-ideas</loc>
-    <lastmod>2025-12-07T19:34:19.871Z</lastmod>
+    <lastmod>2025-12-08T07:56:47.464Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

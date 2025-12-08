@@ -71,7 +71,12 @@
     .card-content h3 a { color: #333; text-decoration: none; }
     .card-content h3 a:hover { color: var(--primary); }
     .card-content p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
-    .card-meta { display: flex; gap: 15px; color: #999; font-size: 0.85rem; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .card-chef { display: flex; align-items: center; gap: 8px; }
+    .card-chef-avatar { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, var(--primary), #10b981); display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; }
+    .card-chef-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .card-chef-name { font-size: 0.8rem; color: #666; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px; }
+    .card-meta { display: flex; gap: 10px; color: #999; font-size: 0.8rem; flex-shrink: 0; }
     .badge { display: inline-block; background: #00000020; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; }
     .filter-bar { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; padding: 20px 0; border-bottom: 1px solid #eee; }
     .filter-btn { padding: 8px 20px; border: 1px solid #ddd; border-radius: 25px; background: white; cursor: pointer; transition: all 0.2s; font-size: 0.9rem; }
@@ -112,15 +117,97 @@
     
     <div class="recipes-grid" id="recipes-container">
       
+    <article class="recipe-card" data-testid="card-recipe-ultimate-pierogies-and-kielbasa-skillet-recipe-one-pan-wonder">
+      <img src="couzintk.site/recipes/hero/b86855bc-e8eb-4a7e-89ac-c3ccec141fd0.png" alt="Ultimate Pierogies and Kielbasa Skillet Recipe - One-Pan Wonder!" class="card-image" loading="lazy">
+      <div class="card-content">
+        
+        <h3><a href="/recipe/ultimate-pierogies-and-kielbasa-skillet-recipe-one-pan-wonder.html">Ultimate Pierogies and Kielbasa Skillet Recipe - One-Pan Wonder!</a></h3>
+        <p>Savor the ultimate comfort food with our Pierogies and Kielbasa Skillet. This hearty, one-pan dish i...</p>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400" alt="Marcus Chen" class="card-chef-img"></div>
+            <span class="card-chef-name">Marcus Chen</span>
+          </div>
+          <div class="card-meta">
+            <span>30 min</span>
+            <span>easy</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="recipe-card" data-testid="card-recipe-hearty-crock-pot-stew-meat-mushrooms-comfort-in-a-bowl">
+      <img src="couzintk.site/recipes/hero/bbbcf370-40b5-4845-b0bd-794de92ed39c.png" alt="Hearty Crock Pot Stew Meat Mushrooms - Comfort in a Bowl" class="card-image" loading="lazy">
+      <div class="card-content">
+        
+        <h3><a href="/recipe/hearty-crock-pot-stew-meat-mushrooms-comfort-in-a-bowl.html">Hearty Crock Pot Stew Meat Mushrooms - Comfort in a Bowl</a></h3>
+        <p>Experience the ultimate comfort with our Crock Pot Stew Meat Mushrooms. A slow-cooked delight that's...</p>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1583394293214-28ez1c0f5c56?w=400" alt="Seham" class="card-chef-img"></div>
+            <span class="card-chef-name">Seham</span>
+          </div>
+          <div class="card-meta">
+            <span>500 min</span>
+            <span>easy</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="recipe-card" data-testid="card-recipe-10-easy-recipes-kids-can-make-themselves-fun-safe">
+      <div class="card-image placeholder"></div>
+      <div class="card-content">
+        
+        <h3><a href="/recipe/10-easy-recipes-kids-can-make-themselves-fun-safe.html">10 Easy Recipes Kids Can Make Themselves - Fun & Safe</a></h3>
+        <p>Empower your little chefs with these delightful recipes kids can make themselves. Safe, fun, and oh-...</p>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1574966740793-953ad374e8ae?w=400" alt="David Okonkwo" class="card-chef-img"></div>
+            <span class="card-chef-name">David Okonkwo</span>
+          </div>
+          <div class="card-meta">
+            <span>35 min</span>
+            <span>easy</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="recipe-card" data-testid="card-recipe-10-recipes-kids-will-love-easy-fun-cooking-ideas">
+      <img src="couzintk.site/recipes/hero/d8e3fc9e-7c7a-4194-b97a-bf84c3027e30.png" alt="10 Recipes Kids Will Love: Easy & Fun Cooking Ideas" class="card-image" loading="lazy">
+      <div class="card-content">
+        
+        <h3><a href="/recipe/10-recipes-kids-will-love-easy-fun-cooking-ideas.html">10 Recipes Kids Will Love: Easy & Fun Cooking Ideas</a></h3>
+        <p>Whip up excitement in the kitchen with these recipes kids will love. Perfect for little chefs and gu...</p>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1574966740793-953ad374e8ae?w=400" alt="David Okonkwo" class="card-chef-img"></div>
+            <span class="card-chef-name">David Okonkwo</span>
+          </div>
+          <div class="card-meta">
+            <span>40 min</span>
+            <span>easy</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <article class="recipe-card" data-testid="card-recipe-10-easy-recipes-kids-will-eat-happily-every-time">
       <img src="couzintk.site/recipes/hero/0c568f23-0b5d-4a52-b3bc-6c95614395cb.png" alt="10 Easy Recipes Kids Will Eat Happily Every Time" class="card-image" loading="lazy">
       <div class="card-content">
         
         <h3><a href="/recipe/10-easy-recipes-kids-will-eat-happily-every-time.html">10 Easy Recipes Kids Will Eat Happily Every Time</a></h3>
         <p>Finding recipes kids will eat can be a challenge, but these 10 easy and delicious options are sure t...</p>
-        <div class="card-meta">
-          <span>45 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400" alt="Marcus Chen" class="card-chef-img"></div>
+            <span class="card-chef-name">Marcus Chen</span>
+          </div>
+          <div class="card-meta">
+            <span>45 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -131,9 +218,15 @@
         
         <h3><a href="/recipe/top-baby-food-recipes-for-6-months-blw-easy-nutritious.html">Top Baby Food Recipes for 6 Months BLW - Easy & Nutritious</a></h3>
         <p>Introduce your little one to solid foods with this delightful baby food recipe for 6 months BLW. Pac...</p>
-        <div class="card-meta">
-          <span>27 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400" alt="Marcus Chen" class="card-chef-img"></div>
+            <span class="card-chef-name">Marcus Chen</span>
+          </div>
+          <div class="card-meta">
+            <span>27 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -144,9 +237,15 @@
         
         <h3><a href="/recipe/top-5-isagenix-recipes-400-600-calories-for-delicious-healthy-eating.html">Top 5 Isagenix Recipes 400-600 Calories for Delicious Healthy Eating</a></h3>
         <p>Explore the best Isagenix recipes 400-600 calories for a balanced diet. These delicious and healthy ...</p>
-        <div class="card-meta">
-          <span>30 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1583394293214-28ez1c0f5c56?w=400" alt="Seham" class="card-chef-img"></div>
+            <span class="card-chef-name">Seham</span>
+          </div>
+          <div class="card-meta">
+            <span>30 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -157,9 +256,15 @@
         
         <h3><a href="/recipe/delicious-low-calorie-recipe-under-600-calories.html">Delicious Low-Calorie Recipe - Under 600 Calories</a></h3>
         <p>Enjoy a delightful, healthy dish that's 600 calories or less. Packed with flavor, this recipe is per...</p>
-        <div class="card-meta">
-          <span>35 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400" alt="Aisha Johnson" class="card-chef-img"></div>
+            <span class="card-chef-name">Aisha Johnson</span>
+          </div>
+          <div class="card-meta">
+            <span>35 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -170,9 +275,15 @@
         
         <h3><a href="/recipe/delicious-recipes-for-6-months-old-babies-nutritious-and-easy.html">Delicious Recipes for 6 Months Old Babies - Nutritious and Easy</a></h3>
         <p>Introduce your 6-month-old to new flavors with these easy, nutritious recipes. Perfect for tiny tast...</p>
-        <div class="card-meta">
-          <span>35 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400" alt="Aisha Johnson" class="card-chef-img"></div>
+            <span class="card-chef-name">Aisha Johnson</span>
+          </div>
+          <div class="card-meta">
+            <span>35 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -183,9 +294,15 @@
         
         <h3><a href="/recipe/6-nutritious-recipes-for-6-months-baby-food-tiny-taste-adventures.html">6 Nutritious Recipes for 6-Months Baby Food - Tiny Taste Adventures</a></h3>
         <p>Introduce your little one to a world of flavors with these delightful recipes for 6 months baby food...</p>
-        <div class="card-meta">
-          <span>45 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1583394293214-28ez1c0f5c56?w=400" alt="Seham" class="card-chef-img"></div>
+            <span class="card-chef-name">Seham</span>
+          </div>
+          <div class="card-meta">
+            <span>45 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -196,9 +313,15 @@
         
         <h3><a href="/recipe/delicious-5-ingredient-recipes-for-busy-weeknights.html">Delicious 5-Ingredient Recipes for Busy Weeknights</a></h3>
         <p>Simple yet delicious, these 5-ingredient recipes are perfect for busy weeknights. Enjoy minimal prep...</p>
-        <div class="card-meta">
-          <span>40 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?w=400" alt="Raj Patel" class="card-chef-img"></div>
+            <span class="card-chef-name">Raj Patel</span>
+          </div>
+          <div class="card-meta">
+            <span>40 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -209,9 +332,15 @@
         
         <h3><a href="/recipe/delicious-recipes-500-calories-or-less-healthy-satisfying.html">Delicious Recipes 500 Calories or Less: Healthy & Satisfying</a></h3>
         <p>Discover a delicious recipe that's under 500 calories! Perfect for a guilt-free meal that doesn't co...</p>
-        <div class="card-meta">
-          <span>45 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400" alt="Emma Thompson" class="card-chef-img"></div>
+            <span class="card-chef-name">Emma Thompson</span>
+          </div>
+          <div class="card-meta">
+            <span>45 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -222,9 +351,15 @@
         
         <h3><a href="/recipe/delicious-recipes-500-calories-flavorful-fulfilling-meals.html">Delicious Recipes 500 Calories: Flavorful & Fulfilling Meals</a></h3>
         <p>Savor the taste of these delicious recipes 500 calories or less. Packed with flavor, they're perfect...</p>
-        <div class="card-meta">
-          <span>40 min</span>
-          <span>medium</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400" alt="Emma Thompson" class="card-chef-img"></div>
+            <span class="card-chef-name">Emma Thompson</span>
+          </div>
+          <div class="card-meta">
+            <span>40 min</span>
+            <span>medium</span>
+          </div>
         </div>
       </div>
     </article>
@@ -235,9 +370,15 @@
         
         <h3><a href="/recipe/delicious-recipes-with-5-ingredients-or-less-try-now.html">Delicious Recipes with 5 Ingredients or Less - Try Now!</a></h3>
         <p>Embrace simplicity with these recipes 5 ingredients or less. Perfect for busy days, these dishes pro...</p>
-        <div class="card-meta">
-          <span>40 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400" alt="Isabella Romano" class="card-chef-img"></div>
+            <span class="card-chef-name">Isabella Romano</span>
+          </div>
+          <div class="card-meta">
+            <span>40 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -248,9 +389,15 @@
         <span class="badge">Baby Food</span>
         <h3><a href="/recipe/delicious-baby-food-recipes-9-12-months-easy-nutritious.html">Delicious Baby Food Recipes 9-12 Months: Easy & Nutritious</a></h3>
         <p>Introduce your little one to new flavors with our baby food recipes for 9-12 months. These dishes ar...</p>
-        <div class="card-meta">
-          <span>30 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=400" alt="Carlos Mendez" class="card-chef-img"></div>
+            <span class="card-chef-name">Carlos Mendez</span>
+          </div>
+          <div class="card-meta">
+            <span>30 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -261,9 +408,15 @@
         <span class="badge">Baby Food</span>
         <h3><a href="/recipe/delicious-recipes-for-9-month-old-babies-nutritious-easy.html">Delicious Recipes for 9 Month Old Babies - Nutritious & Easy!</a></h3>
         <p>Discover wholesome recipes for your 9 month old that are both nutritious and delicious. Perfect for ...</p>
-        <div class="card-meta">
-          <span>25 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400" alt="Aisha Johnson" class="card-chef-img"></div>
+            <span class="card-chef-name">Aisha Johnson</span>
+          </div>
+          <div class="card-meta">
+            <span>25 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
@@ -274,9 +427,15 @@
         <span class="badge">Baby Food</span>
         <h3><a href="/recipe/nutritious-recipes-for-9-month-baby-easy-tasty-ideas.html">Nutritious Recipes for 9 Month Baby - Easy & Tasty Ideas</a></h3>
         <p>Delight your 9-month-old with these nutritious, easy-to-make recipes. Perfect for introducing new fl...</p>
-        <div class="card-meta">
-          <span>30 min</span>
-          <span>easy</span>
+        <div class="card-footer">
+          <div class="card-chef">
+            <div class="card-chef-avatar"><img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=400" alt="Carlos Mendez" class="card-chef-img"></div>
+            <span class="card-chef-name">Carlos Mendez</span>
+          </div>
+          <div class="card-meta">
+            <span>30 min</span>
+            <span>easy</span>
+          </div>
         </div>
       </div>
     </article>
